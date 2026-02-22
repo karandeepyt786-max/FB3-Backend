@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "buildCommand": "npm install",
+    "startCommand": "npx nodemon script.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
