@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "buildCommand": "npm install",
-    "startCommand": "npx nodemon script.js",
+    "startCommand": "nodemon script.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,7 +22,7 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.0.0",
     "multer": "^2.0.2",
-    "nodemon": "^3.1.11",
+    "nodemon": "^3.1.14",
     "path": "^0.12.7",
     "token": "^0.1.0"
   }
