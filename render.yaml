@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: FBNEW3
+    env: node
+    buildCommand: npm install
+    startCommand: npx nodemon script.js
+    plan: free

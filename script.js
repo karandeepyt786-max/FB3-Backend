@@ -1,0 +1,27 @@
+const express=require("express")
+const app=express()
+
+const cors=require("cors")
+const cookiepar=require("cookie-parser")
+
+app.use(cors({ origin: "http://localhost:5173", credentials: true }))
+app.use(express.json())
+app.use(express.urlencoded({extended:true,sameSite: "none", secure: true}))
+app.use(cookiepar())
+
+app.use("/HomeNavImages",express.static("./public/images/HomeNavImages/images/iconpics"))
+app.use("/uploads",express.static("./public/images/uploads"))
+app.use("/Profileuploads",express.static("./public/images/ProfileImages"))
+
+
+app.use("/",require("./Routes/Home").Routers)
+app.use("/FrontendData",require("./Routes/FrontendData").Routers)
+app.use("/Product",require("./Routes/Product").Routers)
+app.use("/ProductOperations",require("./Routes/ProductOperations").Routers)
+app.use("/UserProductOpeartion",require("./Routes/UserProductOpeartion").Routers)
+
+app.use("/User",require("./Routes/User").Routers)
+app.use("/Delete",require("./Routes/deleteItems").Routers)
+app.use("/ProductsByCategory",require("./Routes/ProductsByCategory").Routers)
+
+app.listen(5000)
