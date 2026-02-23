@@ -4,7 +4,7 @@ const app=express()
 const cors=require("cors")
 const cookiepar=require("cookie-parser")
 
-app.use(cors({ origin: "https://fb-3-1-ozfy.vercel.app/", credentials: true }))
+app.use(cors({ origin: "https://fb-3-1-ozfy.vercel.app", credentials: true }))
 app.use(express.json())
 app.use(express.urlencoded({extended:true,sameSite: "none", secure: true}))
 app.use(cookiepar())
